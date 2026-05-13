@@ -40,21 +40,3 @@ Install dependencies with `uv`:
 ```powershell
 uv sync
 ```
-
-Then open the notebook with the project environment selected:
-
-```powershell
-uv run jupyter lab
-```
-
-If you prefer running the notebook non-interactively:
-
-```powershell
-uv run jupyter nbconvert --execute --to notebook --inplace experiment_regression.ipynb
-```
-
-## Notes
-
-- The experiment is deterministic: the notebook sets a fixed random seed.
-- The stochastic optimizers use mini-batches sampled from the same 64 training points.
-- The repository does not require external data for the regression notebook.
